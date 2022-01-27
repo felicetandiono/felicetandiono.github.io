@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bus Routes</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            /**/
+            .luar {
+                position: relative;
+                width: 800px;
+                height: 500px;
+               /* background-color: #efefef;*/
+                margin: 50px auto;
+                z-index: 1;
+                border-style:solid;
+                border-width: 2px;
+                border-color: grey
+            }
+            .dalem {
+                position: relative;
+                width: 600px;
+                height: 450px;
+                margin: auto;
+                margin-top: 0px;
+                /*background-color: #dedede;*/
+            }
+            .baris {
+                position: relative;
+                width: 275px;
+                height: 450px;
+                /*background-color: #df9a9a;*/
+                margin-right: 25px;
+                float: left;
+            }
+            .baris:nth-child(even){
+                margin-right: 0px;
+                margin-left: 25px;
+            }  
+            .halfcol{
+                position: relative;
+                width: 275px;
+                height: 50%;
+                /*background-color: #dfde9a;*/
+            }
+            .baris:nth-child(1) .halfcol:nth-child(1){
+                height: 145px;
+                margin-bottom: 25px;
+            }
+            .baris:nth-child(1) .halfcol:nth-child(2){
+                width: 225px;
+                height: 280px
+            }
+            .baris:nth-child(2) .halfcol:nth-child(1){
+                height: 215px;
+                margin-bottom: 5px;
+            }
+            .baris:nth-child(2) .halfcol:nth-child(2){
+                height: 230px;
+            }
+            .three{
+                position: relative;
+                width: 275px;
+                height: 60px;
+                margin-bottom: 10px;
+                /*background-color:aqua;*/
+            }
+            .three:nth-child(1){
+                height: 45px;
+                margin-bottom: 0px;
+            }
+            .three:nth-child(2){
+                height: 90px;
+            }
+            .three:nth-child(3){
+                width: 155px;
+                margin-left: 175px;
+                float: right;
+            }
+
+            h1,h2,h3,h4,h5,li,p,.table1,.nomor,.table2{
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .table1:nth-child(1){
+                margin-top: 8px;
+                width: 249px;
+                height: 90px;
+            }
+            .table1 th{
+                height: 30%;
+                background-color: grey;
+                border-color: white;
+                color:white;
+            }
+            .table1 th:nth-child(2){
+                width: 169px;
+            }
+            .table1 td{
+                width: 40px;
+                border-color: grey;
+            }
+            .table1 td:nth-child(2){
+                width: 169px;
+            }
+            .table1:nth-child(1),.table1 th,.table1 td{
+                border-style: solid;
+                border-width: thin;
+                border-collapse: collapse;
+                word-wrap:break-word;
+                margin-left: 26px;
+                font-size: 12px;
+                vertical-align: top;
+                text-align:inherit;
+                padding: 5px;
+            }
+            .baris:nth-child(1) .halfcol:nth-child(1) .two:nth-child(1) h1:nth-child(1){
+                height: 25px;
+                font-size: 18px;
+                padding: 10px;
+                color: white;
+                background-color: grey;
+                box-sizing: content-box;
+                display: block;
+            }
+            .baris:nth-child(2) .halfcol:nth-child(1) .three:nth-child(1) h1:nth-child(1){
+                position: relative;
+                height: 25px;
+                font-size: 18px;
+                padding: 10px;
+                float: right;
+            }
+            .baris:nth-child(2) .halfcol:nth-child(1) .three:nth-child(2) h1:nth-child(1){
+                margin-right: 10px;
+                font-size: 90px;
+                float: right;
+            }
+            .baris:nth-child(2) .halfcol:nth-child(1) .three:nth-child(3) p:nth-child(1){
+                float: right;
+                font-size: 12px;
+                padding: 10px;
+                background-color:rgb(214, 196, 224);
+                border-radius: 5px;
+            }
+            .baris:nth-child(1) .halfcol:nth-child(2) h2{
+                color:green;
+                font-size: 22px;
+                padding: 0px;
+                border-style: solid;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+            }
+            .gap{
+                height: 8px;
+                /*background-color: rebeccapurple;*/
+            }
+            h3,h4,li{
+                font-size: 10px;
+                line-height: 15px;
+            }
+            .green{
+                color: green;
+            }
+            h4{
+                margin-left: 10px;
+            }
+            li{
+               margin-left: 20px;
+            }
+            .baris:nth-child(2) .halfcol:nth-child(2) h1:nth-child(1){
+                position: relative;
+                height: 25px;
+                font-size: 18px;
+                /*border-color:cornflowerblue;*/
+                border-style: solid;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-width: 2px;
+            }    
+            .table2{
+                height: 195px;
+                /*background-color: red;*/
+                border-collapse: collapse;
+            }
+            .table2 td:nth-child(1){
+                height: 20%;
+                /*background-color:sienna;*/
+                font-size: 24px;
+            }
+            .table2 td:nth-child(1){
+                width: 65px;
+                /*background-color:blueviolet;*/
+                font-size: 24px;
+                font-weight: bolder;
+            }
+            .table2 td:nth-child(2){
+                width: 150px;
+                /*background-color: royalblue;*/
+                font-size: 12px;
+            }
+            .table2 td:nth-child(3){
+                /*background-color: yellow;*/
+                width: 60px;
+            }
+            .bold{
+                font-weight: bolder;
+            }
+            .box{
+                width: 20px;
+                height: 20px;
+                background-color: blue;
+                align-items: center;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="luar">
+         <div class="dalem"> 
+            <div class="baris">
+                <div class="halfcol">
+                    <div class="two">
+                    <h1>Stand Departure Information</h1>
+                    </div>
+                    <div class="two">
+                        <table class="table1">
+                        <tr>
+                            <th>Route No.</th>
+                            <th>Location</th>
+                            <th>Stand</th>
+                        </tr>
+                        <tr>
+                            <td>81, 82, 83, 84, 85</td>
+                            <td>Perth Busport</td>
+                            <td>9-12</td>
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="halfcol">
+                        <h2>Transperth Information</h2>
+                        <div class="gap"></div>
+                            <h3 style="color: green;">Call us</h3>
+                                <h4><span class="green">InfoLine</span> on 13 62 13</h4>
+                                <h4>(TIS 13 14 50)</h4>
+                        <div class="gap"></div>
+                            <h3 style="color: green;">Visit an InfoCentre at:</h3>
+                                <ul>
+                                    <li>Elizabeth Quay Bus Station</li>
+                                    <li>Perth Busport</li>
+                                    <li>Perth Station</li>
+                                    <li>Perth underground Station</li>
+                                </ul>
+                        <div class="gap"></div>
+                            <h3 style="color: green;">Got an Iphone or Android device?</h3>
+                            <h3>Download our free app now to help you plan your journey.</h3>
+                        <div class="gap"></div>
+                            <h3 style="color: green;">Visit us online</h3>
+                            <h3>transperthwa.gov.au</h3>
+                </div>
+            </div>
+
+            <div class="baris">
+                <div class="halfcol">
+                    <div class="three">
+                        <h1>Bus Timetable</h1>
+                    </div>
+                    <div class="three">
+                        <h1>42</h1>
+                    </div>
+                    <div class="three">
+                        <p>For full service details for these routes, refer to Timetable 43</p>
+                    </div>
+                </div>
+
+                <div class="halfcol">
+                        <h1>Routes</h1>
+                    <div class="gap"></div>
+                    <table class="table2">
+                        <tr>
+                            <td>81</td>
+                            <td><span class="bold">Perth-Wembly</span><br> 
+                              via Cambridge St</td>
+                            <td><div class="box"></div></td>
+                          </tr>
+                        <tr>
+                            <td>82</td>
+                            <td><span class="bold">Perth-Wembly</span><br> 
+                              via Cambridge St</td>
+                            <td><div class="box"></div></td>
+                          </tr>
+                        <tr>
+                            <td>83</td>
+                            <td><span class="bold">Perth-Wembly</span><br> 
+                              via Cambridge St</td>
+                            <td><div class="box"></div></td>
+                          </tr>
+                        <tr>
+                            <td>84</td>
+                            <td><span class="bold">Perth-Wembly</span><br> 
+                              via Cambridge St</td>
+                            <td><div class="box"></div></td>
+                          </tr>
+                        <tr>
+                          <td>85</td>
+                          <td><span class="bold">Perth-Wembly</span><br> 
+                            via Cambridge St</td>
+                          <td><div class="box"></div></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+         </div>
+        
+        </div>
+    </body>
+</html>
