@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+
+<div class="navbar">
+
+  <a href="#home">HOME</a>
+  <a href="#news">MOTOGP 2022</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">NASIONAL
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="#">Hukum</a>
+        <a href="#">Nusantara</a>
+        <a href="#">Sosial</a>
+        <a href="#">Pendidikan</a>
+        <a href="#">Lingkungan</a>
+        <a href="#">Hankam</a>
+    </div>
+  </div>
+  <a href="#news">POLITIK</a> 
+  <div class="dropdown">
+    <button class="dropbtn1" onclick="myFunction()">DUNIA
+    </button>
+    <div class="dropdown-content" id="myDropdown1">
+        <a href="#">Asia</a>
+        <a href="#">Amerika</a>
+        <a href="#">Eropa</a>
+        <a href="#">Timur Tengah</a>
+        <a href="#">Afrika</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn2" onclick="myFunction()">MEGAPOLITAN
+    </button>
+    <div class="dropdown-content" id="myDropdown2">
+        <a href="#">Pelayanan Publik</a>
+        <a href="#">Aktualitas</a>
+        <a href="#">Hukum & Kriminalitas</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn3" onclick="myFunction()">EKONOMI
+    </button>
+    <div class="dropdown-content" id="myDropdown3">
+        <a href="#">Makro</a>
+        <a href="#">Pasar Modal</a>
+        <a href="#">Bisnis</a>
+        <a href="#">Bank</a>
+        <a href="#">Properti</a>
+        <a href="#">Infrastruktur</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn4" onclick="myFunction()">OTOMOTIF
+    </button>
+    <div class="dropdown-content" id="myDropdown4">
+        <a href="#">Mobil</a>
+        <a href="#">Motor</a>
+        <a href="#">Tips Otomotif</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn5" onclick="myFunction()">BOLA
+    </button>
+    <div class="dropdown-content" id="myDropdown5">
+        <a href="#">Inggris</a>
+        <a href="#">Spanyol</a>
+        <a href="#">Italia</a>
+        <a href="#">UEFA</a>
+        <a href="#">Indonesia</a>
+        <a href="#">Internasional</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn6" onclick="myFunction()">LAINNYA
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown6">
+        <a href="#">OLAHRAGA</a>
+        <a href="#">GAYA HIDUP</a>
+        <a href="#">HIBURAN</a>
+        <a href="#">KESEHATAN</a>
+        <a href="#">DIGITAL</a>
+        <a href="#">BERITA GRAFIK</a>
+        <a href="#">PEMDA</a>
+        <a href="#">FOKUS</a>
+        <a href="#">FIGUR</a>
+        <a href="#">OPINI</a>
+    </div>
+  </div>
+</div>
+
+<h3>Berita Satu</h3>
+<!--<p>Click on the "Dropdown" link to see the dropdown menu.</p>-->
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown1").classList.toggle("show");
+  document.getElementById("myDropdown2").classList.toggle("show");
+  document.getElementById("myDropdown3").classList.toggle("show");
+  document.getElementById("myDropdown4").classList.toggle("show");
+  document.getElementById("myDropdown5").classList.toggle("show");
+  document.getElementById("myDropdown6").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn1')) {
+  var myDropdown1 = document.getElementById("myDropdown1");
+    if (myDropdown1.classList.contains('show')) {
+      myDropdown1.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown2 = document.getElementById("myDropdown2");
+    if (myDropdown2.classList.contains('show')) {
+      myDropdown2.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn3')) {
+  var myDropdown3 = document.getElementById("myDropdown3");
+    if (myDropdown3.classList.contains('show')) {
+      myDropdown3.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn4')) {
+  var myDropdown4 = document.getElementById("myDropdown4");
+    if (myDropdown4.classList.contains('show')) {
+      myDropdown4.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn5')) {
+  var myDropdown5 = document.getElementById("myDropdown5");
+    if (myDropdown5.classList.contains('show')) {
+      myDropdown5.classList.remove('show');
+    }
+  }
+  if (!e.target.matches('.dropbtn6')) {
+  var myDropdown6 = document.getElementById("myDropdown6");
+    if (myDropdown6.classList.contains('show')) {
+      myDropdown6.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
